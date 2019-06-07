@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hola Mundo!</title>
+
+        <!-- yooooooo -->
+            <link href="css/styles.css" rel="stylesheet" type="text/css" />
+            <script type="text/javascript" src="js/modales.js"></script>
+        <!-- yooooooo -->
+
+    </head>
+    <body>
+
+        <h1>Mostar Modales</h1>
+        <br>
+
+  <!-- datos enviados->> jmgModal(id,data,ok,calcel,input) -->   
+        <button onclick="jmgModal('miventana',
+                                    {
+                                        title: 'Ventana modal si cambiaaaaaa',
+                                        width: 400,
+                                        height: 40,
+                                        content: 'conteniiiiiiiiiido.'
+                                    },
+                                    ['Aceptar',function()
+                                        {
+                                            alert('aceptar esteeeeee uniiiico');
+                                        }
+                                    ],
+                                    ['Cancelar',function()
+                                        {
+                                            alert('Cancelaaaaar.');
+                                        }
+                                    ]
+                                );"
+        >
+            Abrir modal con botones "Aceptar" y "Cancelar"
+        </button>
+        
+
+
+
+
+        <button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 400,
+				height: 40,
+        content: 'Esta ventana es equivalente a la función prompt de javascript. Para mostrar el input es imprescindible que haya un botón de Aceptar. El botón Cancelar es opcional'},
+        ['Aceptar',function(input){
+             alert('Has escrito: '+input);
+        }], /* obligatorio */
+        null, /* boton cancelar, opcional */
+        ['Placeholder del input']);"
+        >Abrir modal con botón "Aceptar" y un input</button>
+
+
+
+
+    </body>
+</html>
+
+
